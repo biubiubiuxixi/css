@@ -1,0 +1,24 @@
+.body {
+    font-size: 16px; /* 设置父级字体大小 */
+}
+.btn {
+    padding: .3em .8em;  /* 依赖本级的字号进行缩放 */
+    border: 1px solid rgba(0, 0, 0, .1);
+    background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent); /* 颜色渐变 */
+    border-radius: .2em;
+    box-shadow: 0 .05em .25em rgba(0, 0, 0, .5);
+    color: white;
+    text-shadow: 0 -.05em .05em rgba(0, 0, 0, .5);
+    font-size: 125%; /* 根据父级字体大小设置字体大小 */
+    line-height: 1.5; /* 行高是字号的1.5倍 */
+}
+
+.ok {
+    background-color: #6b0;
+}
+.cancel {
+    background-color: #c00;
+}
+div {
+    margin: 10px;
+}
