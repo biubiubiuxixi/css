@@ -97,3 +97,136 @@ div {
     background-size: 30px 30px;
     background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
 }
+.picturebg {
+    padding: 1em;
+    border: 1em solid transparent;
+    height: 100px;
+    background: linear-gradient(white, white), url(pig.jpg);
+    background-size: cover;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+}
+.emailbg {
+    padding: 1em;
+    height: 100px;
+    border: 1em solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                repeating-linear-gradient(-45deg, red 0, red 12.5%, white 0, white 25%, #58a 0,#58a 37.5%, white 0, white 50%) 0 / 5em 5em;
+}
+.antborder {
+    padding: 1em;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / .6em .6em;
+    animation: ants 12s linear infinite;
+}
+.radis {
+    height: 100px;
+    background: #fb3;
+    border-radius: 50% / 100% 100% 0 0;
+}
+.radis2 {
+    height: 100px;
+    background: #fb3;
+    border-radius: 100% 0 0 100% / 50%;
+}
+.radis3 {
+    height: 100px;
+    background: #fb3;
+    border-radius: 0 100% 100% 0 / 50%;
+}
+.radis4 {
+    height: 100px;
+    background: #fb3;
+    border-radius: 100% 0 0 0;
+}
+
+@keyframes ants {
+    to {
+        background-position: 100%;
+    }
+}
+
+
+.skew {
+    padding: 1em;
+    background: #fb3;
+    color: wheat;
+    transform: skewX(-45deg);
+}
+.skew > div {
+    transform: skewX(45deg);
+    margin: 0;
+}
+.weiskew {
+    position: relative;
+    padding: 1em;
+}
+.weiskew::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: skewX(45deg);
+    background: #fb3;
+}
+.piclx {
+    width: 400px;
+    transform: rotate(45deg);
+    overflow: hidden;
+}
+.piclx > img {
+    /* max-width: 100%; */
+    transform: rotate(-45deg) scale(1.42); /* 把图片旋转回正常位置，并进行放大根号2倍 */
+}
+.clippic > img {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    transition: 1s clip-path;
+}
+.clippic > img:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.xmqj {
+    height: 100px;
+    background: #fb3;
+    background: linear-gradient(-45deg, transparent 15px, #fb3 0);
+}
+.lmqj {
+    height: 100px;
+    background: #fb3;
+    background: linear-gradient(-45deg, transparent 15px, #fb3 0) right,
+                linear-gradient(45deg, transparent 15px, #58a 0) left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+.nayj {
+    background: #58a;
+    height: 100px;
+    background: radial-gradient(circle at top left, transparent 15px, #58a 0) top left,
+                radial-gradient(circle at top right, transparent 15px, #58a 0) top right,
+                radial-gradient(circle at bottom right, transparent 15px, #58a 0) bottom right,
+                radial-gradient(circle at bottom left, transparent 15px, #58a 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+.tx {
+    position: relative;
+    display: inline-block;
+    padding: .5em 1em .35em;
+    color: white;
+}
+.tx::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #58a;
+    transform: scaleY(1.3) perspective(.5em) rotateX(5deg);
+    transform-origin: bottom;
+}
